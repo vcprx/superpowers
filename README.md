@@ -16,6 +16,8 @@ cd superpowers
 ./scripts/install.sh
 ```
 
+> **Important:** `install.sh` symlinks `config/settings.json` to `~/.claude/settings.json`. This will **overwrite** your existing global Claude Code settings. Back up `~/.claude/settings.json` before running if you have custom settings you want to keep.
+
 Re-run `install.sh` after adding new skills, commands, or agents.
 
 ## What's included
