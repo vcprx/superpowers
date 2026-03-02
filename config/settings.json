@@ -2,6 +2,7 @@
   "permissions": {
     "allow": [
       "Skill(laravel-development:*)",
+      "Skill(laravel-guidelines:*)",
       "Skill(laravel-api-development:*)",
       "Bash(git:*)",
       "Bash(curl:*)",
