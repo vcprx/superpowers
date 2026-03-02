@@ -45,7 +45,8 @@
       "Bash(tr:*)",
       "Bash(open:*)",
       "WebSearch",
-      "WebFetch"
+      "WebFetch",
+      "mcp__laravel-boost__*"
     ],
     "defaultMode": "acceptEdits"
   },
