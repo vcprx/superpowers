@@ -6,7 +6,7 @@ Personal skills, commands, and agents for [Claude Code](https://claude.ai/code) 
 
 **Option A — Claude Code plugin (Claude Code only):**
 ```
-/plugin install /path/to/superpowers
+/plugin install https://github.com/vcprx/superpowers
 ```
 
 **Option B — Dotfiles symlinks (Claude Code + OpenCode):**
@@ -26,6 +26,9 @@ Re-run `install.sh` after adding new skills, commands, or agents.
 
 | Skill | Description |
 |-------|-------------|
+| `laravel-development` | Route Laravel project tasks to the appropriate sub-skill (e.g. scaffolding a modular architecture) |
+| `laravel-development/developing-modular-laravel` | Scaffold modules, register service providers, wire namespaces, set up factories |
+| `laravel-api-development` | Route Laravel API tasks to the appropriate sub-skill (e.g. writing API documentation) |
 | `laravel-api-development/writing-laravel-api-documentation` | Write and update l5-swagger OpenAPI annotations for Laravel APIs |
 
 ## Adding your own
