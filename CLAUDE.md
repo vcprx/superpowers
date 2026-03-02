@@ -59,6 +59,14 @@ Also add the skill to the `permissions.allow` list in `config/settings.json`:
 "Skill(my-skill:*)"
 ```
 
+And add a row for it in the Skills table in `README.md`.
+
+**Checklist when adding any skill:**
+- [ ] `skills/my-skill/SKILL.md` created
+- [ ] `./scripts/install.sh` run
+- [ ] `config/settings.json` — `Skill(my-skill:*)` added to `permissions.allow`
+- [ ] `README.md` — row added to the Skills table
+
 ## Notes
 
 - OpenCode reads `~/.claude/skills/` natively — no separate OpenCode config needed.
