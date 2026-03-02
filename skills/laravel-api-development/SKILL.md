@@ -16,7 +16,7 @@ concern; invoke the most appropriate one for the task at hand.
 
 | Sub-skill | File | When to invoke |
 |-----------|------|----------------|
-| `writing-laravel-api-documentation` | `writing-laravel-api-documentation.md` | Writing, adding, or updating l5-swagger OpenAPI annotations on controllers, form requests, and API resources |
+| `writing-laravel-api-documentation` | `writing-laravel-api-documentation.md` | Writing or updating API documentation — including OpenAPI annotations |
 
 ## When to Invoke Each Sub-Skill
 
