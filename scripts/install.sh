@@ -7,7 +7,9 @@ CLAUDE_AGENTS="$HOME/.claude/agents"
 
 mkdir -p "$CLAUDE_SKILLS" "$CLAUDE_COMMANDS" "$CLAUDE_AGENTS"
 
-# Link global Claude Code settings and statusline
+# Link global Claude Code config files
+ln -sfn "$REPO_DIR/config/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+echo "Linked CLAUDE.md"
 ln -sfn "$REPO_DIR/config/settings.json" "$HOME/.claude/settings.json"
 echo "Linked settings.json"
 ln -sfn "$REPO_DIR/config/statusline.sh" "$HOME/.claude/statusline.sh"
