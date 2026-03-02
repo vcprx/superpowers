@@ -7,6 +7,10 @@ CLAUDE_AGENTS="$HOME/.claude/agents"
 
 mkdir -p "$CLAUDE_SKILLS" "$CLAUDE_COMMANDS" "$CLAUDE_AGENTS"
 
+# Link global Claude Code settings
+ln -sfn "$REPO_DIR/config/settings.json" "$HOME/.claude/settings.json"
+echo "Linked settings.json"
+
 # Link individual skill directories into ~/.claude/skills/
 # Works for both Claude Code and OpenCode (reads ~/.claude/skills/ natively)
 for dir in "$REPO_DIR/skills"/*/; do

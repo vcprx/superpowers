@@ -53,6 +53,12 @@ disable-model-invocation: false
 
 Then run `./scripts/install.sh` and restart Claude Code / OpenCode.
 
+Also add the skill to the `permissions.allow` list in `config/settings.json`:
+
+```json
+"Skill(my-skill:*)"
+```
+
 ## Notes
 
 - OpenCode reads `~/.claude/skills/` natively — no separate OpenCode config needed.
