@@ -32,6 +32,12 @@ Re-run `install.sh` after adding new skills, commands, or agents.
 | `laravel-api-development` | Route Laravel API tasks to the appropriate sub-skill (e.g. writing API documentation) |
 | `laravel-api-development/writing-laravel-api-documentation` | Write and update l5-swagger OpenAPI annotations for Laravel APIs |
 
+### Project-local commands
+
+| Command | Description |
+|---------|-------------|
+| `/new-superpower` | Scaffold a new skill, command, or agent in this repo |
+
 ## Adding your own
 
 **Skill:**
