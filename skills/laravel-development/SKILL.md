@@ -1,8 +1,11 @@
 ---
 name: laravel-development
 description: >
-  Use when working on a Laravel project — routing tasks to the appropriate
-  sub-skill (e.g. scaffolding a modular architecture).
+  Use when writing or reviewing PHP/Laravel code, or when working in a Laravel
+  project (files like artisan, app/, routes/, composer.json with laravel/framework).
+  TRIGGER when: user writes PHP classes, controllers, models, jobs, commands,
+  service providers, or asks about Laravel architecture, modules, or coding conventions.
+  DO NOT TRIGGER when: working on non-PHP projects or pure front-end (JS/CSS) tasks.
 user-invocable: false
 disable-model-invocation: false
 ---

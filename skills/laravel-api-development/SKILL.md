@@ -1,8 +1,11 @@
 ---
 name: laravel-api-development
 description: >
-  Use when working on a Laravel API project — routing tasks to the appropriate
-  sub-skill (e.g. writing API documentation with l5-swagger).
+  Use when writing or documenting a Laravel API, or when working with Laravel
+  controllers that serve JSON responses.
+  TRIGGER when: user adds or edits API endpoints, OpenAPI/Swagger annotations,
+  FormRequest classes, ApiResource classes, or asks about API documentation in a Laravel project.
+  DO NOT TRIGGER when: working on non-Laravel APIs or non-PHP projects.
 user-invocable: false
 disable-model-invocation: false
 ---
