@@ -45,6 +45,7 @@
       "Bash(cut:*)",
       "Bash(tr:*)",
       "Bash(open:*)",
+      "Read(~/.claude/**)",
       "WebSearch",
       "WebFetch",
       "mcp__laravel-boost__*",
