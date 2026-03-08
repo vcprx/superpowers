@@ -23,6 +23,26 @@ Only deviate when you have a clear justification.
 - Use typed properties, not docblocks
 - Use constructor property promotion when all properties can be promoted
 
+### Method Visibility
+
+- **Prefer `protected` over `private`** for non-public methods — it keeps classes extensible without sacrificing encapsulation
+- Only use `private` when explicitly asked to, or when you have a strong reason to prevent subclass access
+- `public` for the intended external API, `protected` for internal implementation details
+
+```php
+// Good — protected allows subclasses to override or reuse
+protected function buildQuery(): Builder
+{
+    return $this->model->newQuery();
+}
+
+// Only when explicitly required or intentionally sealed
+private function hashPassword(string $password): string
+{
+    return bcrypt($password);
+}
+```
+
 ---
 
 ## Docblocks
