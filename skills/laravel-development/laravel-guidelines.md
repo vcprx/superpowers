@@ -148,6 +148,36 @@ This follows the same rule as all other variables: `$exception` not `$e`, `$requ
 ### Configuration
 - Service configs go in `config/services.php` — don't create new config files for services
 - Use `config()` helper; never call `env()` outside of config files
+- **Never call `config()` outside of service providers.** Read config values in the service provider and inject them via the constructor when binding classes in the container. This makes classes testable without a full app bootstrap.
+
+```php
+// Bad — config() called deep inside a class
+class PaymentGateway
+{
+    public function charge(int $amount): void
+    {
+        $apiKey = config('services.stripe.key'); // hard to test
+    }
+}
+
+// Good — value injected via constructor, bound in a service provider
+class PaymentGateway
+{
+    public function __construct(
+        protected string $apiKey,
+    ) {}
+
+    public function charge(int $amount): void
+    {
+        // uses $this->apiKey
+    }
+}
+
+// In PaymentServiceProvider::register()
+$this->app->bind(PaymentGateway::class, fn () => new PaymentGateway(
+    apiKey: config('services.stripe.key'),
+));
+```
 
 ### Artisan Commands
 - Always provide feedback: `$this->comment('All ok!')`
