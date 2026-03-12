@@ -3,8 +3,13 @@ name: laravel-api-development
 description: >
   Use when writing or documenting a Laravel API, or when working with Laravel
   controllers that serve JSON responses.
-  TRIGGER when: user adds or edits API endpoints, OpenAPI/Swagger annotations,
-  FormRequest classes, ApiResource classes, or asks about API documentation in a Laravel project.
+
+  TRIGGER when:
+  - user adds or edits API endpoints
+  - user adds or edits OpenAPI/Swagger annotations
+  - user works with FormRequest or ApiResource classes
+  - user asks about API documentation in a Laravel project
+
   DO NOT TRIGGER when: working on non-Laravel APIs or non-PHP projects.
 user-invocable: false
 disable-model-invocation: false

@@ -1,10 +1,18 @@
 ---
 name: laravel-development
 description: >
-  Use when writing or reviewing PHP/Laravel code, or when working in a Laravel
-  project (files like artisan, app/, routes/, composer.json with laravel/framework).
-  TRIGGER when: user writes PHP classes, controllers, models, jobs, commands,
-  service providers, or asks about Laravel architecture, modules, or coding conventions.
+  Use when working in a Laravel project OR writing PHP/Laravel code.
+
+  AUTO-LOAD when any of these are detected in the project:
+  - artisan file in the project root
+  - composer.json containing "laravel/framework"
+  - app/Http/ or app/Models/ directories present
+  - any .php file is being read or edited
+
+  TRIGGER when:
+  - user writes PHP classes, controllers, models, jobs, commands, or service providers
+  - user asks about Laravel architecture, modules, or coding conventions
+
   DO NOT TRIGGER when: working on non-PHP projects or pure front-end (JS/CSS) tasks.
 user-invocable: false
 disable-model-invocation: false
