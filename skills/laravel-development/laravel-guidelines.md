@@ -124,13 +124,14 @@ This follows the same rule as all other variables: `$exception` not `$e`, `$requ
 | Classes / Enums | PascalCase | `OrderStatus` |
 | Methods / Variables | camelCase | `getUserName`, `$firstName` |
 | Routes / URLs | kebab-case | `/open-source` |
-| Route names | camelCase | `->name('openSource')` |
+| Route names | kebab-case | `->name('blog-posts.index')` |
 | Route parameters | camelCase | `{userId}` |
 | Config files | kebab-case | `pdf-generator.php` |
 | Config keys | snake_case | `chrome_path` |
 | Artisan commands | kebab-case | `delete-old-records` |
 | Views | camelCase | `openSource.blade.php` |
 
+- Route names use kebab-case segments, not camelCase: `blog-posts.show`, `user-settings.edit` — never `blogPosts.show` or `userSettings.edit`
 - Never use single-letter variable names — use descriptive names (`$exception` not `$e`)
 - Always use `use` statements — never inline fully qualified class names (e.g. `\Exception`)
 
