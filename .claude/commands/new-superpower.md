@@ -20,15 +20,43 @@ Three artifact types exist. Pick the right one for the task, then follow the che
 
 ## Skills
 
+### Core design principles
+
+**Progressive Disclosure** — Skills use a three-level loading system:
+1. **YAML frontmatter** — always loaded in the system prompt; lets Claude decide when to invoke the skill without loading everything
+2. **SKILL.md body** — loaded when the skill is deemed relevant; contains full instructions
+3. **Linked files** (`references/`, `assets/`, sub-skill `.md` files) — discovered and loaded only as needed
+
+This minimises token usage while keeping specialised expertise available.
+
+**Composability** — Claude can load multiple skills simultaneously. A skill should work alongside others, not assume it is the only active capability.
+
+**Portability** — Skills work identically across Claude.ai, Claude Code, and API. Write once, works everywhere (assuming any runtime dependencies are met).
+
 ### Directory layout
 
 ```
 skills/
   my-skill/
-    SKILL.md           ← required: frontmatter + routing/body
-    sub-skill-a.md     ← optional sub-skills (no frontmatter)
+    SKILL.md              ← required: frontmatter + routing/body
+    sub-skill-a.md        ← optional sub-skills (no frontmatter)
     sub-skill-b.md
+    scripts/              ← executable code invoked by the skill
+      do-something.ts
+      helper.sh
+    references/           ← documentation loaded by Claude as needed
+      api-reference.md
+      spec.md
+    assets/               ← templates, fonts, icons used in output
+      template.html
+      logo.png
 ```
+
+**`scripts/`** — Executable code (TypeScript, Bash, etc.) the skill runs during a task. Reference these from SKILL.md instructions, e.g. `run scripts/generate.ts`.
+
+**`references/`** — Supporting documentation Claude can navigate on demand (API specs, style guides, cheat-sheets). Keep files focused so Claude loads only what is relevant.
+
+**`assets/`** — Static files used to produce output: templates, fonts, icons, example files. Reference by relative path from SKILL.md.
 
 ### SKILL.md frontmatter
 
