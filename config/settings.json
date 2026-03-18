@@ -5,6 +5,7 @@
       "Skill(laravel-guidelines:*)",
       "Skill(laravel-api-development:*)",
       "Bash(git:*)",
+      "Bash(glab api:*)",
       "Bash(curl:*)",
       "Bash(composer:*)",
       "Bash(vendor/bin/phpunit:*)",
