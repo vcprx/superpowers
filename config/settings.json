@@ -1,6 +1,7 @@
 {
   "permissions": {
     "allow": [
+      "Skill(new-superpowers:*)",
       "Skill(laravel-development:*)",
       "Skill(laravel-guidelines:*)",
       "Skill(laravel-api-development:*)",
