@@ -3,7 +3,6 @@
     "allow": [
       "Skill(new-superpowers:*)",
       "Skill(laravel-development:*)",
-      "Skill(laravel-guidelines:*)",
       "Skill(laravel-api-development:*)",
       "Bash(git:*)",
       "Bash(glab api:*)",

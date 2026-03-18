@@ -88,7 +88,18 @@ skills/my-skill/
     └── assets/        # templates, fixtures, static files
 ```
 
-Use sub-files to keep SKILL.md under ~500 lines. Reference them explicitly in the body with guidance on when to read them.
+Use sub-files to keep SKILL.md under ~500 lines. Reference them explicitly in the body with guidance on when to read them. This is the third level of progressive disclosure: Claude loads sub-files only when the task calls for them.
+
+Use this pattern for each reference file:
+
+```markdown
+## References
+
+**`references/filename.md`** — Read this file when [specific trigger condition].
+Covers [what's inside]. Read it when the user asks to [concrete examples].
+```
+
+The key: tell Claude to **read** the file (not just that it exists), name the exact path, and be specific about the trigger so Claude loads it only when relevant.
 
 #### Writing principles
 

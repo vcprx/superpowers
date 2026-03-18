@@ -28,10 +28,10 @@ Re-run `install.sh` after adding new skills, commands, or agents.
 |-------|-------------|
 | `new-superpowers` | Create, scaffold, or improve skills, commands, and agents in this repo |
 | `laravel-development` | Route Laravel project tasks to the appropriate sub-skill (e.g. scaffolding a modular architecture) |
-| `laravel-development/developing-modular-laravel` | Scaffold modules, register service providers, wire namespaces, set up factories |
-| `laravel-development/laravel-guidelines` | PHP and Laravel coding guidelines (Spatie style) — naming, types, control flow, exceptions |
+| `laravel-development` → `references/developing-modular-laravel` | Scaffold modules, register service providers, wire namespaces, set up factories |
+| `laravel-development` → `references/laravel-guidelines` | PHP and Laravel coding guidelines (Spatie style) — naming, types, control flow, exceptions |
 | `laravel-api-development` | Route Laravel API tasks to the appropriate sub-skill (e.g. writing API documentation) |
-| `laravel-api-development/writing-laravel-api-documentation` | Write and update l5-swagger OpenAPI annotations for Laravel APIs |
+| `laravel-api-development` → `references/writing-laravel-api-documentation` | Write and update l5-swagger OpenAPI annotations for Laravel APIs |
 
 ### Commands
 

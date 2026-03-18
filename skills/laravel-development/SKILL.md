@@ -20,27 +20,10 @@ disable-model-invocation: false
 
 # Laravel Development
 
-This skill family covers common Laravel development tasks. Each sub-skill handles a specific
-concern; invoke the most appropriate one for the task at hand.
+This skill bundles two reference files. Read them when relevant — do not load both upfront.
 
-## Available Sub-Skills
+## References
 
-| Sub-skill | File | When to invoke |
-|-----------|------|----------------|
-| `developing-modular-laravel` | `developing-modular-laravel.md` | Creating or editing a module — including scaffolding the directory structure, registering a service provider, adding models with factories, or wiring a new namespace |
-| `laravel-guidelines` | `laravel-guidelines.md` | Writing or reviewing any Laravel/PHP code — apply naming conventions, control flow rules, type declarations, and Laravel-specific patterns |
+**`references/laravel-guidelines.md`** — Read this file before writing or reviewing any Laravel/PHP code. Covers naming conventions, type declarations, control flow rules, and Spatie-style patterns. Read it when the user asks to write, edit, or review controllers, models, jobs, commands, service providers, or any PHP class.
 
-## When to Invoke Each Sub-Skill
-
-**`developing-modular-laravel`** — invoke when the user asks to:
-- Scaffold a new module directory under `modules/`
-- Register a module's service provider (in `ModuleServiceProvider` or `bootstrap/providers.php`)
-- Wire a new `Modules\` PSR-4 namespace in `composer.json`
-- Set up an Eloquent factory for a module model (using `#[UseFactory]`)
-- Establish the modular structure for the first feature of a new Laravel project
-
-**`laravel-guidelines`** — invoke when the user asks to:
-- Write new PHP or Laravel code (controllers, models, jobs, commands, etc.)
-- Review or refactor existing Laravel code for style compliance
-- Apply Spatie-style conventions to naming, control flow, or type declarations
-- Resolve questions about Laravel coding standards
+**`references/developing-modular-laravel.md`** — Read this file when the task involves the modular architecture. Covers scaffolding module directories under `modules/`, registering service providers, wiring `Modules\` PSR-4 namespaces in `composer.json`, and setting up Eloquent factories with `#[UseFactory]`. Read it when the user asks to create a module, add a service provider, or establish the modular structure for a new project.

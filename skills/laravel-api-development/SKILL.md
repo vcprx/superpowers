@@ -17,21 +17,8 @@ disable-model-invocation: false
 
 # Laravel API Development
 
-This skill family covers common Laravel API development tasks. Each sub-skill handles a specific
-concern; invoke the most appropriate one for the task at hand.
+This skill bundles one reference file. Read it when relevant.
 
-## Available Sub-Skills
+## References
 
-| Sub-skill | File | When to invoke |
-|-----------|------|----------------|
-| `writing-laravel-api-documentation` | `writing-laravel-api-documentation.md` | Writing or updating API documentation — including OpenAPI annotations |
-
-## When to Invoke Each Sub-Skill
-
-**`writing-laravel-api-documentation`** — invoke when the user asks to:
-- Add OpenAPI/Swagger documentation to a Laravel controller or endpoint
-- Annotate a `FormRequest` class for l5-swagger
-- Annotate an `ApiResource` or `ResourceCollection` class
-- Set up the base controller with `OA\Info` / `OA\Components`
-- Regenerate the OpenAPI spec (`php artisan l5-swagger:generate`)
-- Fix or update existing l5-swagger annotations
+**`references/writing-laravel-api-documentation.md`** — Read this file when the task involves writing or updating OpenAPI/Swagger documentation. Covers l5-swagger annotations for controllers, `FormRequest` classes, `ApiResource` and `ResourceCollection` classes, base controller setup (`OA\Info` / `OA\Components`), and regenerating the spec with `php artisan l5-swagger:generate`. Read it when the user asks to add, fix, or regenerate API docs.
