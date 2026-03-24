@@ -1,4 +1,10 @@
 {
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "System Uldis initializing...",
+    ]
+  },
   "permissions": {
     "allow": [
       "Skill(new-superpowers:*)",
