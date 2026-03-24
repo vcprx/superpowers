@@ -38,7 +38,6 @@ Re-run `install.sh` after adding new skills, commands, or agents.
 | Command | Description |
 |---------|-------------|
 | `/new-superpower` | Scaffold a new skill, command, or agent in this repo (project-local) |
-| `/review-mr [iid]` | Review a GitLab MR; prompts for selection if no IID given — posts inline draft notes |
 
 ## Adding your own
 
