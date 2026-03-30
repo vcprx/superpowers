@@ -32,6 +32,9 @@ Re-run `install.sh` after adding new skills, commands, or agents.
 | `laravel-development` → `references/laravel-guidelines` | PHP and Laravel coding guidelines (Spatie style) — naming, types, control flow, exceptions |
 | `laravel-api-development` | Route Laravel API tasks to the appropriate sub-skill (e.g. writing API documentation) |
 | `laravel-api-development` → `references/writing-laravel-api-documentation` | Write and update l5-swagger OpenAPI annotations for Laravel APIs |
+| `seo-audit` | Audit technical SEO, JavaScript/SPA rendering, on-page optimization, and content quality for web apps |
+| `seo-audit` → `references/ai-writing-detection` | AI writing patterns to avoid when producing SEO content |
+| `seo-audit` → `references/aeo-geo-patterns` | Content block patterns optimized for answer engines and AI citation |
 
 ### Commands
 

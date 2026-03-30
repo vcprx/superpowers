@@ -8,6 +8,7 @@
   "permissions": {
     "allow": [
       "Skill(new-superpowers:*)",
+      "Skill(seo-audit:*)",
       "Skill(laravel-development:*)",
       "Skill(laravel-api-development:*)",
       "Bash(git:*)",
