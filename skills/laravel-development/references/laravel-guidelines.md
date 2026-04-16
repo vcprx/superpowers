@@ -121,7 +121,8 @@ This follows the same rule as all other variables: `$exception` not `$e`, `$requ
 
 | Context | Style | Example |
 |---|---|---|
-| Classes / Enums | PascalCase | `OrderStatus` |
+| Classes / Enum names | PascalCase | `OrderStatus` |
+| Enum cases | SCREAMING_SNAKE_CASE | `OrderStatus::PENDING` |
 | Methods / Variables | camelCase | `getUserName`, `$firstName` |
 | Routes / URLs | kebab-case | `/open-source` |
 | Route names | kebab-case | `->name('blog-posts.index')` |
@@ -228,7 +229,7 @@ $this->app->bind(PaymentGateway::class, fn () => new PaymentGateway(
 
 ## Enums
 
-- Enum case names: PascalCase (`OrderStatus::Pending`)
+- Enum case names: SCREAMING_SNAKE_CASE (`OrderStatus::PENDING`, `BookingType::IN_PROGRESS`)
 
 ---
 
