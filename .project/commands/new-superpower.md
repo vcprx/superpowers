@@ -13,7 +13,7 @@ Three artifact types exist. Pick the right one for the task, then follow the che
 | Auto-trigger on context (PHP files, Anthropic imports, etc.) | **Skill** |
 | Give Claude domain knowledge / guidelines for a task | **Skill** |
 | Add a user-invocable `/command` that runs a workflow | **Command** |
-| Project-local command (scoped to one repo only) | **Project-local command** in `.claude/commands/` |
+| Project-local command (scoped to one repo only) | **Project-local command** in `.project/commands/` |
 | Define a specialized sub-agent persona or capability | **Agent** |
 
 ---
@@ -112,7 +112,7 @@ Run `./scripts/install.sh` to symlink into `~/.claude/commands/`.
 ### Project-local command (scoped to one repo)
 
 ```
-<repo>/.claude/commands/my-command.md
+<repo>/.project/commands/my-command.md
 ```
 
 No install step — Claude Code picks it up automatically. Use this for commands that only
@@ -159,7 +159,7 @@ After creating the files:
 - [ ] Row added to `README.md`
 
 **Project-local command:**
-- [ ] `<repo>/.claude/commands/my-command.md` created (no install step)
+- [ ] `<repo>/.project/commands/my-command.md` created (no install step)
 
 **Agent:**
 - [ ] `agents/my-agent.md` created
