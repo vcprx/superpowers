@@ -4,8 +4,12 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CLAUDE_SKILLS="$HOME/.claude/skills"
 CLAUDE_COMMANDS="$HOME/.claude/commands"
 CLAUDE_AGENTS="$HOME/.claude/agents"
+OPENCODE_COMMANDS="$HOME/.config/opencode/commands"
+OPENCODE_AGENTS="$HOME/.config/opencode/agents"
 
-mkdir -p "$CLAUDE_SKILLS" "$CLAUDE_COMMANDS" "$CLAUDE_AGENTS"
+mkdir -p \
+  "$CLAUDE_SKILLS" "$CLAUDE_COMMANDS" "$CLAUDE_AGENTS" \
+  "$OPENCODE_COMMANDS" "$OPENCODE_AGENTS"
 
 # Link global Claude Code config files
 ln -sfn "$REPO_DIR/config/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
@@ -30,7 +34,8 @@ for file in "$REPO_DIR/commands"/*.md; do
   [ -f "$file" ] || continue
   cmd_name="$(basename "$file")"
   ln -sfn "$file" "$CLAUDE_COMMANDS/$cmd_name"
-  echo "Linked command: $cmd_name"
+  ln -sfn "$file" "$OPENCODE_COMMANDS/$cmd_name"
+  echo "Linked command: $cmd_name (Claude + OpenCode)"
 done
 
 # Link individual agent files
@@ -38,8 +43,10 @@ for file in "$REPO_DIR/agents"/*.md; do
   [ -f "$file" ] || continue
   agent_name="$(basename "$file")"
   ln -sfn "$file" "$CLAUDE_AGENTS/$agent_name"
-  echo "Linked agent: $agent_name"
+  ln -sfn "$file" "$OPENCODE_AGENTS/$agent_name"
+  echo "Linked agent: $agent_name (Claude + OpenCode)"
 done
+
 
 echo ""
 echo "Done. Restart Claude Code / OpenCode to pick up changes."
