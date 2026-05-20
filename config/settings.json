@@ -1,10 +1,4 @@
 {
-  "spinnerVerbs": {
-    "mode": "replace",
-    "verbs": [
-      "Farting"
-    ]
-  },
   "permissions": {
     "allow": [
       "Skill(new-superpowers:*)",
@@ -56,8 +50,6 @@
       "Bash(tr:*)",
       "Bash(open:*)",
       "Read(~/.claude/**)",
-      "Read(~/.claude/skills/**)",
-      "Read(/Users/vlad/code/superpowers/skills/**/references/**)",
       "WebSearch",
       "WebFetch",
       "mcp__laravel-boost__*",
@@ -69,7 +61,15 @@
     "type": "command",
     "command": "~/.claude/statusline.sh"
   },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Farting"
+    ]
+  },
   "alwaysThinkingEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "editorMode": "vim",
+  "remoteControlAtStartup": false
 }
