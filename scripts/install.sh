@@ -38,6 +38,13 @@ for file in "$REPO_DIR/commands"/*.md; do
   echo "Linked command: $cmd_name (Claude + OpenCode)"
 done
 
+# Link helper scripts used by commands (skipped by the *.md glob above)
+if [ -d "$REPO_DIR/commands/scripts" ]; then
+  chmod +x "$REPO_DIR/commands/scripts"/*.sh
+  ln -sfn "$REPO_DIR/commands/scripts" "$CLAUDE_COMMANDS/scripts"
+  echo "Linked command scripts -> $CLAUDE_COMMANDS/scripts"
+fi
+
 # Link individual agent files
 for file in "$REPO_DIR/agents"/*.md; do
   [ -f "$file" ] || continue

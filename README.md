@@ -41,6 +41,7 @@ Re-run `install.sh` after adding new skills, commands, or agents.
 | Command | Description |
 |---------|-------------|
 | `/new-superpower` | Scaffold a new skill, command, or agent in this repo (project-local) |
+| `/new-feature` | Create an isolated git worktree + branch for a feature, running `composer setup` if defined |
 
 ## Adding your own
 
